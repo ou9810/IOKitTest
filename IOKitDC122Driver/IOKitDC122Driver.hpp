@@ -2,9 +2,9 @@
 
 #include <IOKit/usb/IOUSBDevice.h>
 
-class com_ryan_test_IOKitUSBDriver : public IOService
+class com_ryan_test_IOKitDC122Driver : public IOService
 {
-    OSDeclareDefaultStructors(com_ryan_test_IOKitUSBDriver)
+    OSDeclareDefaultStructors(com_ryan_test_IOKitDC122Driver)
     
 public:
     virtual bool init(OSDictionary *dictionary = 0) override;

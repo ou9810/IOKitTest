@@ -2,11 +2,11 @@
 
 #include <IOKit/IOLib.h>
 #include <IOKit/usb/IOUSBInterface.h>
-#include "IOKitUSBDriver.hpp"
+#include "IOKitDC122Driver.hpp"
 
 // This required macro defines the class's constructors, destructors,
 // and several other methods I/O Kit requires.
-OSDefineMetaClassAndStructors(com_ryan_test_IOKitUSBDriver, IOService)
+OSDefineMetaClassAndStructors(com_ryan_test_IOKitDC122Driver, IOService)
 
 // Define the driver's superclass.
 #define super IOService
@@ -47,40 +47,40 @@ void logEndpoint(IOUSBPipe *pipe) {
     IOLog("maxPacketSize: %d interval: %d\n", pipe->GetMaxPacketSize(), pipe->GetInterval());
 }
 
-bool com_ryan_test_IOKitUSBDriver::init(OSDictionary *dict)
+bool com_ryan_test_IOKitDC122Driver::init(OSDictionary *dict)
 {
-    IOLog("com_ryan_test_IOKitUSBDriver::init(%p)\n", this);
+    IOLog("com_ryan_test_IOKitDC122Driver::init(%p)\n", this);
     bool result = super::init(dict);
     return result;
 }
 
-void com_ryan_test_IOKitUSBDriver::free()
+void com_ryan_test_IOKitDC122Driver::free()
 {
-    IOLog("com_ryan_test_IOKitUSBDriver::free(%p)\n", this);
+    IOLog("com_ryan_test_IOKitDC122Driver::free(%p)\n", this);
     super::free();
 }
 
-IOService *com_ryan_test_IOKitUSBDriver::probe(IOService *provider, SInt32 *score)
+IOService *com_ryan_test_IOKitDC122Driver::probe(IOService *provider, SInt32 *score)
 {
     IOLog("%s(%p)::probe\n", getName(), this);
     IOService *result = super::probe(provider, score);
     return result;
 }
 
-bool com_ryan_test_IOKitUSBDriver::attach(IOService *provider)
+bool com_ryan_test_IOKitDC122Driver::attach(IOService *provider)
 {
     IOLog("%s(%p)::attach\n", getName(), this);
     bool result = super::attach(provider);
     return result;
 }
 
-void com_ryan_test_IOKitUSBDriver::detach(IOService *provider)
+void com_ryan_test_IOKitDC122Driver::detach(IOService *provider)
 {
     IOLog("%s(%p)::detach\n", getName(), this);
     super::detach(provider);
 }
 
-bool com_ryan_test_IOKitUSBDriver::start(IOService *provider)
+bool com_ryan_test_IOKitDC122Driver::start(IOService *provider)
 {
     IOLog("%s(%p)::start\n", getName(), this);
     bool result = super::start(provider);
@@ -125,13 +125,13 @@ bool com_ryan_test_IOKitUSBDriver::start(IOService *provider)
     return result;
 }
 
-void com_ryan_test_IOKitUSBDriver::stop(IOService *provider)
+void com_ryan_test_IOKitDC122Driver::stop(IOService *provider)
 {
     IOLog("%s(%p)::stop\n", getName(), this);
     super::stop(provider);
 }
 
-bool com_ryan_test_IOKitUSBDriver::terminate(IOOptionBits options)
+bool com_ryan_test_IOKitDC122Driver::terminate(IOOptionBits options)
 {
     IOLog("%s(%p)::terminate\n", getName(), this);
     bool result = super::terminate(options);
