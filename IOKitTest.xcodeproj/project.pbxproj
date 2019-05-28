@@ -7,19 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		94B9E06C22924EF600558C68 /* IOKitTest.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 94B9E06B22924EF600558C68 /* IOKitTest.hpp */; };
-		94B9E06E22924EF600558C68 /* IOKitTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94B9E06D22924EF600558C68 /* IOKitTest.cpp */; };
+		94595CBA229B73CE00BE05BE /* IOKitUSBDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 94595CB9229B73CE00BE05BE /* IOKitUSBDriver.hpp */; };
+		94595CBC229B73CE00BE05BE /* IOKitUSBDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94595CBB229B73CE00BE05BE /* IOKitUSBDriver.cpp */; };
+		94D05FA62294E42100AF8A20 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94D05FA52294E42100AF8A20 /* main.cpp */; };
+		94D05FAA2294E85500AF8A20 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B9E07622924FAB00558C68 /* IOKit.framework */; };
+		94D05FAD2294E90E00AF8A20 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94D05FAB2294E85C00AF8A20 /* CoreFoundation.framework */; };
+		94D05FB62295287300AF8A20 /* IOKitTestKext.c in Sources */ = {isa = PBXBuildFile; fileRef = 94D05FB52295287300AF8A20 /* IOKitTestKext.c */; };
+		94D05FF922967CAE00AF8A20 /* IOKitDriver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 94D05FF822967CAE00AF8A20 /* IOKitDriver.hpp */; };
+		94D05FFB22967CAE00AF8A20 /* IOKitDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 94D05FFA22967CAE00AF8A20 /* IOKitDriver.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		94D05FA12294E42100AF8A20 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		94B9E06822924EF600558C68 /* IOKitTest.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOKitTest.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		94B9E06B22924EF600558C68 /* IOKitTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOKitTest.hpp; sourceTree = "<group>"; };
-		94B9E06D22924EF600558C68 /* IOKitTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOKitTest.cpp; sourceTree = "<group>"; };
-		94B9E06F22924EF600558C68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94595CB7229B73CE00BE05BE /* IOKitUSBDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOKitUSBDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		94595CB9229B73CE00BE05BE /* IOKitUSBDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOKitUSBDriver.hpp; sourceTree = "<group>"; };
+		94595CBB229B73CE00BE05BE /* IOKitUSBDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOKitUSBDriver.cpp; sourceTree = "<group>"; };
+		94595CBD229B73CE00BE05BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94B9E07622924FAB00558C68 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		94D05FA32294E42100AF8A20 /* IOKitProbe */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IOKitProbe; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D05FA52294E42100AF8A20 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		94D05FAB2294E85C00AF8A20 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		94D05FB32295287300AF8A20 /* IOKitTestKext.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOKitTestKext.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D05FB52295287300AF8A20 /* IOKitTestKext.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IOKitTestKext.c; sourceTree = "<group>"; };
+		94D05FB72295287300AF8A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D05FF622967CAE00AF8A20 /* IOKitDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IOKitDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
+		94D05FF822967CAE00AF8A20 /* IOKitDriver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IOKitDriver.hpp; sourceTree = "<group>"; };
+		94D05FFA22967CAE00AF8A20 /* IOKitDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IOKitDriver.cpp; sourceTree = "<group>"; };
+		94D05FFC22967CAE00AF8A20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		94B9E06522924EF600558C68 /* Frameworks */ = {
+		94595CB4229B73CE00BE05BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FA02294E42100AF8A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D05FAD2294E90E00AF8A20 /* CoreFoundation.framework in Frameworks */,
+				94D05FAA2294E85500AF8A20 /* IOKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FB02295287300AF8A20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FF322967CAE00AF8A20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,62 +81,173 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		94595CB8229B73CE00BE05BE /* IOKitUSBDriver */ = {
+			isa = PBXGroup;
+			children = (
+				94595CB9229B73CE00BE05BE /* IOKitUSBDriver.hpp */,
+				94595CBB229B73CE00BE05BE /* IOKitUSBDriver.cpp */,
+				94595CBD229B73CE00BE05BE /* Info.plist */,
+			);
+			path = IOKitUSBDriver;
+			sourceTree = "<group>";
+		};
 		94B9E05E22924EF600558C68 = {
 			isa = PBXGroup;
 			children = (
-				94B9E06A22924EF600558C68 /* IOKitTest */,
+				94D05FA42294E42100AF8A20 /* IOKitProbe */,
+				94D05FB42295287300AF8A20 /* IOKitTestKext */,
+				94D05FF722967CAE00AF8A20 /* IOKitDriver */,
+				94595CB8229B73CE00BE05BE /* IOKitUSBDriver */,
 				94B9E06922924EF600558C68 /* Products */,
+				94B9E07522924FAA00558C68 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		94B9E06922924EF600558C68 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94B9E06822924EF600558C68 /* IOKitTest.kext */,
+				94D05FA32294E42100AF8A20 /* IOKitProbe */,
+				94D05FB32295287300AF8A20 /* IOKitTestKext.kext */,
+				94D05FF622967CAE00AF8A20 /* IOKitDriver.kext */,
+				94595CB7229B73CE00BE05BE /* IOKitUSBDriver.kext */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		94B9E06A22924EF600558C68 /* IOKitTest */ = {
+		94B9E07522924FAA00558C68 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94B9E06B22924EF600558C68 /* IOKitTest.hpp */,
-				94B9E06D22924EF600558C68 /* IOKitTest.cpp */,
-				94B9E06F22924EF600558C68 /* Info.plist */,
+				94D05FAB2294E85C00AF8A20 /* CoreFoundation.framework */,
+				94B9E07622924FAB00558C68 /* IOKit.framework */,
 			);
-			path = IOKitTest;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94D05FA42294E42100AF8A20 /* IOKitProbe */ = {
+			isa = PBXGroup;
+			children = (
+				94D05FA52294E42100AF8A20 /* main.cpp */,
+			);
+			path = IOKitProbe;
+			sourceTree = "<group>";
+		};
+		94D05FB42295287300AF8A20 /* IOKitTestKext */ = {
+			isa = PBXGroup;
+			children = (
+				94D05FB52295287300AF8A20 /* IOKitTestKext.c */,
+				94D05FB72295287300AF8A20 /* Info.plist */,
+			);
+			path = IOKitTestKext;
+			sourceTree = "<group>";
+		};
+		94D05FF722967CAE00AF8A20 /* IOKitDriver */ = {
+			isa = PBXGroup;
+			children = (
+				94D05FF822967CAE00AF8A20 /* IOKitDriver.hpp */,
+				94D05FFA22967CAE00AF8A20 /* IOKitDriver.cpp */,
+				94D05FFC22967CAE00AF8A20 /* Info.plist */,
+			);
+			path = IOKitDriver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		94B9E06322924EF600558C68 /* Headers */ = {
+		94595CB2229B73CE00BE05BE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B9E06C22924EF600558C68 /* IOKitTest.hpp in Headers */,
+				94595CBA229B73CE00BE05BE /* IOKitUSBDriver.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FAE2295287300AF8A20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FF122967CAE00AF8A20 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D05FF922967CAE00AF8A20 /* IOKitDriver.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		94B9E06722924EF600558C68 /* IOKitTest */ = {
+		94595CB6229B73CE00BE05BE /* IOKitUSBDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94B9E07222924EF600558C68 /* Build configuration list for PBXNativeTarget "IOKitTest" */;
+			buildConfigurationList = 94595CC0229B73CE00BE05BE /* Build configuration list for PBXNativeTarget "IOKitUSBDriver" */;
 			buildPhases = (
-				94B9E06322924EF600558C68 /* Headers */,
-				94B9E06422924EF600558C68 /* Sources */,
-				94B9E06522924EF600558C68 /* Frameworks */,
-				94B9E06622924EF600558C68 /* Resources */,
+				94595CB2229B73CE00BE05BE /* Headers */,
+				94595CB3229B73CE00BE05BE /* Sources */,
+				94595CB4229B73CE00BE05BE /* Frameworks */,
+				94595CB5229B73CE00BE05BE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = IOKitTest;
-			productName = IOKitTest;
-			productReference = 94B9E06822924EF600558C68 /* IOKitTest.kext */;
+			name = IOKitUSBDriver;
+			productName = IOKitUSBDriver;
+			productReference = 94595CB7229B73CE00BE05BE /* IOKitUSBDriver.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		94D05FA22294E42100AF8A20 /* IOKitProbe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D05FA72294E42100AF8A20 /* Build configuration list for PBXNativeTarget "IOKitProbe" */;
+			buildPhases = (
+				94D05F9F2294E42100AF8A20 /* Sources */,
+				94D05FA02294E42100AF8A20 /* Frameworks */,
+				94D05FA12294E42100AF8A20 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOKitProbe;
+			productName = IOKitProbe;
+			productReference = 94D05FA32294E42100AF8A20 /* IOKitProbe */;
+			productType = "com.apple.product-type.tool";
+		};
+		94D05FB22295287300AF8A20 /* IOKitTestKext */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D05FB82295287300AF8A20 /* Build configuration list for PBXNativeTarget "IOKitTestKext" */;
+			buildPhases = (
+				94D05FAE2295287300AF8A20 /* Headers */,
+				94D05FAF2295287300AF8A20 /* Sources */,
+				94D05FB02295287300AF8A20 /* Frameworks */,
+				94D05FB12295287300AF8A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOKitTestKext;
+			productName = IOKitTestKext;
+			productReference = 94D05FB32295287300AF8A20 /* IOKitTestKext.kext */;
+			productType = "com.apple.product-type.kernel-extension";
+		};
+		94D05FF522967CAE00AF8A20 /* IOKitDriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94D05FFD22967CAE00AF8A20 /* Build configuration list for PBXNativeTarget "IOKitDriver" */;
+			buildPhases = (
+				94D05FF122967CAE00AF8A20 /* Headers */,
+				94D05FF222967CAE00AF8A20 /* Sources */,
+				94D05FF322967CAE00AF8A20 /* Frameworks */,
+				94D05FF422967CAE00AF8A20 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOKitDriver;
+			productName = IOKitDriver;
+			productReference = 94D05FF622967CAE00AF8A20 /* IOKitDriver.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +259,16 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = ryan.test;
 				TargetAttributes = {
-					94B9E06722924EF600558C68 = {
+					94595CB6229B73CE00BE05BE = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					94D05FA22294E42100AF8A20 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					94D05FB22295287300AF8A20 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					94D05FF522967CAE00AF8A20 = {
 						CreatedOnToolsVersion = 10.2.1;
 					};
 				};
@@ -107,19 +279,37 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 94B9E05E22924EF600558C68;
 			productRefGroup = 94B9E06922924EF600558C68 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94B9E06722924EF600558C68 /* IOKitTest */,
+				94D05FA22294E42100AF8A20 /* IOKitProbe */,
+				94D05FB22295287300AF8A20 /* IOKitTestKext */,
+				94D05FF522967CAE00AF8A20 /* IOKitDriver */,
+				94595CB6229B73CE00BE05BE /* IOKitUSBDriver */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		94B9E06622924EF600558C68 /* Resources */ = {
+		94595CB5229B73CE00BE05BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FB12295287300AF8A20 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FF422967CAE00AF8A20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -129,17 +319,78 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		94B9E06422924EF600558C68 /* Sources */ = {
+		94595CB3229B73CE00BE05BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94B9E06E22924EF600558C68 /* IOKitTest.cpp in Sources */,
+				94595CBC229B73CE00BE05BE /* IOKitUSBDriver.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05F9F2294E42100AF8A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D05FA62294E42100AF8A20 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FAF2295287300AF8A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D05FB62295287300AF8A20 /* IOKitTestKext.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94D05FF222967CAE00AF8A20 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94D05FFB22967CAE00AF8A20 /* IOKitDriver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		94595CBE229B73CE00BE05BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				INFOPLIST_FILE = IOKitUSBDriver/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitUSBDriver;
+				MODULE_VERSION = 1.0.0d1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitUSBDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		94595CBF229B73CE00BE05BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				INFOPLIST_FILE = IOKitUSBDriver/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitUSBDriver;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitUSBDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
 		94B9E07022924EF600558C68 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -191,11 +442,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -244,40 +493,95 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
-		94B9E07322924EF600558C68 /* Debug */ = {
+		94D05FA82294E42100AF8A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				DEVELOPMENT_TEAM = XUT42CJK5K;
-				INFOPLIST_FILE = IOKitTest/Info.plist;
-				MODULE_NAME = com.ryan.test.IOKitTest;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		94D05FA92294E42100AF8A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		94D05FB92295287300AF8A20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				INFOPLIST_FILE = IOKitTestKext/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitTestKext;
+				MODULE_START = IOKitTestKext_start;
+				MODULE_STOP = IOKitTestKext_stop;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitTestKext;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
 			name = Debug;
 		};
-		94B9E07422924EF600558C68 /* Release */ = {
+		94D05FBA2295287300AF8A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				INFOPLIST_FILE = IOKitTestKext/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitTestKext;
+				MODULE_START = IOKitTestKext_start;
+				MODULE_STOP = IOKitTestKext_stop;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitTestKext;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Release;
+		};
+		94D05FFE22967CAE00AF8A20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1.0.0d1;
 				DEVELOPMENT_TEAM = XUT42CJK5K;
-				INFOPLIST_FILE = IOKitTest/Info.plist;
-				MODULE_NAME = com.ryan.test.IOKitTest;
+				INFOPLIST_FILE = IOKitDriver/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitDriver;
 				MODULE_VERSION = 1.0.0d1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitTest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitDriver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = kext;
+			};
+			name = Debug;
+		};
+		94D05FFF22967CAE00AF8A20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0.0d1;
+				DEVELOPMENT_TEAM = XUT42CJK5K;
+				INFOPLIST_FILE = IOKitDriver/Info.plist;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MODULE_NAME = com.ryan.test.IOKitDriver;
+				MODULE_VERSION = 1.0.0d1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.test.IOKitDriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = kext;
 			};
@@ -286,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		94595CC0229B73CE00BE05BE /* Build configuration list for PBXNativeTarget "IOKitUSBDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94595CBE229B73CE00BE05BE /* Debug */,
+				94595CBF229B73CE00BE05BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		94B9E06222924EF600558C68 /* Build configuration list for PBXProject "IOKitTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -295,11 +608,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94B9E07222924EF600558C68 /* Build configuration list for PBXNativeTarget "IOKitTest" */ = {
+		94D05FA72294E42100AF8A20 /* Build configuration list for PBXNativeTarget "IOKitProbe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94B9E07322924EF600558C68 /* Debug */,
-				94B9E07422924EF600558C68 /* Release */,
+				94D05FA82294E42100AF8A20 /* Debug */,
+				94D05FA92294E42100AF8A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D05FB82295287300AF8A20 /* Build configuration list for PBXNativeTarget "IOKitTestKext" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D05FB92295287300AF8A20 /* Debug */,
+				94D05FBA2295287300AF8A20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94D05FFD22967CAE00AF8A20 /* Build configuration list for PBXNativeTarget "IOKitDriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94D05FFE22967CAE00AF8A20 /* Debug */,
+				94D05FFF22967CAE00AF8A20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
